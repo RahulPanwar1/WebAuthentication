@@ -6,7 +6,10 @@ const ejs = require("ejs");
 const mongoose = require("mongoose");
 const md5 = require("md5");
 const app = express();
-
+//can also used bcrypt for hashing + salting upto round 10 for less load.
+//1st ->mongoose encryption
+//2nd ->md5
+//3rd -> bcrypt
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
